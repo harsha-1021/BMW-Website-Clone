@@ -1,4 +1,3 @@
-
 # 🚗 BMW Car Showcase & Booking Website
 
 A **Full Stack Web Development Project** built using **HTML, CSS, JavaScript, Node.js, Express, and SQLite**.  
