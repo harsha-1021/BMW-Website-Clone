@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact BMW</title>
+  <link rel="icon" href="bmw-logo.png" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: url('contact-bg.jpg') center/cover no-repeat, #0b0b0b;
+      color: white;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .container {
+      background: rgba(0, 0, 0, 0.7);
+      padding: 30px 50px;
+      border-radius: 15px;
+      width: 90%;
+      max-width: 600px;
+      box-shadow: 0 0 20px rgba(255,255,255,0.2);
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    input, textarea {
+      padding: 12px;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      outline: none;
+    }
+    input:focus, textarea:focus {
+      border: 1px solid #00b4d8;
+    }
+    button {
+      background: #00b4d8;
+      color: white;
+      font-size: 18px;
+      font-weight: 600;
+      padding: 12px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    button:hover {
+      background: #0077b6;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Contact BMW</h1>
+    <form id="contactForm">
+      <input type="text" name="name" placeholder="Full Name" required />
+      <input type="tel" name="phone" placeholder="Phone Number" required />
+      <input type="tel" name="whatsapp" placeholder="WhatsApp Number (optional)" />
+      <input type="email" name="email" placeholder="E-mail" required />
+      <textarea name="message" rows="4" placeholder="Your Message..." required></textarea>
+      <button type="submit"><i class="fa-solid fa-paper-plane"></i> Send Message</button>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      const formData = Object.fromEntries(new FormData(e.target).entries());
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData)
+      });
+      const data = await res.json();
+
+      if (res.ok) {
+        alert('Message sent successfully! We’ll get back to you soon.');
+        e.target.reset();
+      } else {
+        alert(data.error || 'Failed to send message');
+      }
+    });
+  </script>
+
+</body>
+</html>

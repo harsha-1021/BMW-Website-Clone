@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMW</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="icon" href="bmw-logo.png">
+    <style>
+        .bmwlogo {
+            margin-left: 50px;
+            margin-top: 30px;
+            padding-right: 350px;
+        }
+
+        #toppart {
+            display: flex;
+            background-image: url(color.jpg);
+            background-repeat: no-repeat;
+        }
+
+        .nav {
+            display: flex;
+            gap: 50px;
+            padding: 12px 50px;
+            border-bottom: 1px solid #ccc;
+            align-items: center;
+        }
+
+        .nav a {
+            font-size: x-large;
+            font-family: monospace;
+            text-decoration: none;
+            color: #000;
+            padding: 6px 12px;
+            border-radius: 6px;
+            transition: color .2s, background-color .2s;
+        }
+
+        .nav a:hover {
+            color: green;
+        }
+
+        .nav a.active {
+            color: #fff;
+            background-color: green;
+            /* stays green on the current page */
+        }
+
+
+        h1 {
+            font-family: sans-serif;
+            font-size: x-large;
+            /* padding-top: 30px;
+            padding-left: 30px; */
+        }
+
+        .logins {
+            padding-left: 400px;
+            /* font-size: xx-large; */
+        }
+
+        a {
+            color: rgb(0, 0, 0);
+
+        }
+
+        .logins {
+            display: flex;
+            margin-top: 20px;
+            margin-left: 20px;
+        }
+
+        .loginss {
+            font-size: x-large;
+        }
+
+        .locationss {
+            padding-left: 30px;
+            font-size: x-large;
+        }
+
+        /* #middlepart {
+            display: flex;
+        }
+
+        .about {
+            margin-left: 50px;
+            font-size: x-large;
+            font-family: monospace;
+            text-decoration: none;
+        }
+
+        .home {
+            padding-left: 50px;
+            font-size: x-large;
+            font-family: monospace;
+            text-decoration: none;
+        }
+
+        .models {
+            padding-left: 50px;
+            font-size: x-large;
+            font-family: monospace;
+            text-decoration: none;
+        } */
+
+        a:active,
+        a:hover {
+            color: blue;
+            text-decoration: overline;
+        }
+
+        dt {
+            font-size: x-large;
+            font-family: sans-serif;
+            padding-top: 20px;
+            padding-left: 20px;
+        }
+
+        dd {
+            font-size: larger;
+            font-family: sans-serif;
+            padding-top: 10px;
+            padding-left: 20px;
+        }
+
+        button {
+            width: 200px;
+            height: 100px;
+            font-size: x-large;
+            background-color: black;
+            color: white;
+        }
+
+        .contact {
+            padding-top: 80px;
+            padding-left: 500px;
+        }
+
+        .address {
+            padding-top: 80px;
+            padding-left: 80px;
+        }
+
+        #bottom {
+            display: flex;
+        }
+
+        .bottom {
+            padding-top: 30px;
+            /* margin-top: 30px; */
+            /* margin-left: 50px; */
+            display: flex;
+            padding-bottom: 100px;
+            background-color: rgba(128, 128, 128, 0.303);
+        }
+
+        .child10 {
+            padding-left: 30px;
+        }
+
+        .child11 {
+            padding-left: 100px;
+        }
+
+        .child12 {
+            padding-left: 200px;
+        }
+
+        .child13 {
+            padding-left: 100px;
+            font-size: x-large;
+        }
+
+        a {
+            font-size: x-large;
+            text-decoration: none;
+        }
+
+        .first {
+            padding-bottom: 30px;
+        }
+
+
+        /* .background{
+            background-image: url(about\ background.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 700px;
+        } */
+        /* #content{
+            color: aqua;
+        } */
+        /* span{
+            color: aqua;
+        } */
+    </style>
+</head>
+
+<body>
+    <div id="toppart">
+        <div><img src="bmw-logo.png" alt="" width="100px" height="100px" class="bmwlogo"></div>
+        <div>
+            <pre><h1 style="margin-top: 40px;">      The Ultimate Driving Machine</h1></pre>
+            <h1> Where performance meets elegance</h1>
+        </div>
+        <div class="logins">
+            <div>
+                <div class="loginss"><a href="file:///C:/pumo%20fullstack/bmw/frontend/login.html" target="_blank">
+                        <abbr title="Login Page"><i class="fa-solid fa-circle-user"></i></abbr></a> </div>
+            </div>
+            <div>
+                <div class="locationss"><i class="fa-solid fa-location-dot"></i> <select name="location" id="location">
+                        <option value="chennai">chennai</option>
+                    </select></div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="background">
+        <!-- <div id="middlepart">
+            <div class="home"><a href="file:///C:/pumo%20fullstack/bmw/bmw.html"> <span>Home </span></a></div>
+            <div class="about"><a href="file:///C:/pumo%20fullstack/bmw/about.html"><span>About Us </span></a></div>
+            <div class="models"><a href="file:///C:/pumo%20fullstack/bmw/models.html"><span> Models </span></a></div>
+        </div> -->
+        <div id="middlepart" class="nav">
+            <a href="bmw.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="models.html">Models</a>
+        </div>
+
+        <script>
+            // get the current file name (e.g., "about.html")
+            let page = window.location.pathname.split("/").pop();
+            if (!page) page = "bmw.html";           // default if it’s the root
+
+            // find the matching link and mark it active
+            const current = document.querySelector(`.nav a[href$="${page}"]`);
+            if (current) current.classList.add("active");
+        </script>
+
+
+
+        <div id="content">
+            <dl>
+                <dt>THE BMW GROUP</dt>
+                <dd>With its four brands BMW, MINI, Rolls-Royce and BMW Motorrad, the BMW Group is the world’s leading
+                    premium manufacturer of automobiles and motorcycles and also provides premium financial and mobility
+                    services. The BMW Group production network comprises over 30 production sites worldwide; the company
+                    has
+                    a global sales network in more than 140 countries. <br> In 2022, the BMW Group sold nearly 2.4
+                    million
+                    passenger vehicles and more than 202,000 motorcycles worldwide. The profit before tax in the
+                    financial
+                    year 2022 was € 23.5 billion on revenues amounting to € 142.6 billion. As of 31 December 2022, the
+                    BMW
+                    Group had a workforce of 149,475 employees.</dd>
+
+
+                <dt>What We Offer</dt>
+                <dd>
+                    Detailed BMW Models: Get insights into various BMW series, their features, and specifications.
+                </dd>
+
+
+                <dt>Our Mission</dt>
+                <dd>To inspire and inform BMW enthusiasts by presenting every model with clarity, detail, and elegance.
+                    We
+                    aim to bridge the gap between admiration and ownership by providing accurate, visually engaging, and
+                    accessible content.</dd>
+            </dl>
+        </div>
+
+        <div id="bottom">
+            <div class="contact"><button><i class="fa-solid fa-comment-dots" style="font-size: x-large;"></i><br>
+                    <a href="contact.html" style="color: #ffffff;">Contact us</a></button></div>
+            <div class="address"><button><i class="fa-solid fa-map-location-dot"></i> <br> Visit the nearest
+                    shop</button></div>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="bottom">
+        <div class="child10">
+            <div class="first"><a href=""> contact us </a>
+                <p>1234567890</p>
+            </div>
+
+            <div class="first"><a href="">bmw@gmail.com</a></div>
+        </div>
+        <div class="child11">
+            <div><a href="https://www.instagram.com/bmw/"><i class="fab fa-instagram"
+                        style="font-size:24px; color:#E1306C; font-size: 40px;"></i></a></div> <br> <br>
+            <div> <a href=""><i class="fab fa-whatsapp" style="font-size:36px; color:#25D366;"></i></a></div> <br> <br>
+
+            <div><a href=""><i class="fab fa-facebook fa-2x" style="color:#1877F2; font-size: xx-large;"></i>
+                </a></div> <br> <br>
+
+            <div><a href=""><i class="fab fa-twitter fa-2x" style="color:#1DA1F2; font-size: x-large;"></i>
+                </a></div>
+        </div>
+
+        <div class="child13">
+            <div>
+                <span style="font-size: large;"><b> Quick Links </b></span> <br> <br>
+                <div>Build your BMW</div> <br>
+                <div>BMW Financial services</div> <br>
+                <div>BMW Safety</div> <br>
+                <div>BMW Premium Selection (Used Cars)</div>
+            </div>
+        </div>
+
+        <div class="child13">
+            <div>
+                <span style="font-size: large;"> <b> Experience BMW </b></span> <br> <br>
+                <div>BMW Groups</div> <br>
+                <div>BMW Club</div> <br>
+                <div>BMW Motorrad</div> <br>
+                <div>Charging Network</div>
+            </div>
+        </div>
+
+        <div class="child13">
+            <span style="font-size: large;"> <b>Legal </b></span> <br> <br>
+            <div>Legal Disclaimer/Imprint</div> <br>
+            <div>Privacy Policy</div>
+        </div>
+
+
+    </div>
+
+
+
+    <script src="/app.js"></script>
+
+</body>
+
+</html>

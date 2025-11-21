@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up</title>
+
+    <link rel="stylesheet" href="">
+    <style>
+        .sign {
+            font-size: x-large;
+            margin-top: 50px;
+            font-family: sans-serif;
+            padding-top: 30px;
+            color: aliceblue;
+        }
+
+        #name {
+            margin-top: 30px;
+            width: 250px;
+            height: 25px;
+            border-radius: 5px;
+        }
+
+        #mail {
+            margin-top: 30px;
+            width: 250px;
+            height: 25px;
+            border-radius: 5px;
+        }
+
+        body {
+            background-image: url(sign\ up\ back.jpg);
+            background-size: cover;
+        }
+
+        .signup {
+            background-color: rgba(0, 0, 0, 0.599);
+            border-radius: 10px;
+            border: solid;
+            width: 500px;
+            height: 500px;
+            margin-top: 80px;
+        }
+
+        #pass {
+            margin-top: 30px;
+            width: 250px;
+            height: 25px;
+            border-radius: 5px;
+        }
+
+        #passs {
+            margin-top: 30px;
+            width: 250px;
+            height: 25px;
+            border-radius: 5px;
+
+        }
+
+        button {
+            margin-top: 20px;
+            text-align: left;
+        }
+
+        a {
+            color: aliceblue;
+        }
+
+        .login {
+            margin-top: 30px;
+            color: aliceblue;
+        }
+
+        #signupForm{
+            margin-top: 180px;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <form id="signupForm">
+            <input type="text" name="name" id="name" placeholder="Enter your full name" required> <br>
+            <input type="email" name="email" id="mail" placeholder="Enter your e-mail" required> <br>
+            <input type="password" name="password" id="pass" placeholder="Enter your Password" required> <br>
+            <input type="password" id="passs" placeholder="Re-enter your password" required> <br>
+            <button type="submit">Sign up</button>
+        </form>
+
+        <script>
+            document.getElementById('signupForm').addEventListener('submit', async (e) => {
+                e.preventDefault();
+
+                const name = document.getElementById('name').value.trim();
+                const email = document.getElementById('mail').value.trim();
+                const password = document.getElementById('pass').value;
+                const confirm = document.getElementById('passs').value;
+
+                if (password !== confirm) {
+                    alert('Passwords do not match');
+                    return;
+                }
+
+                const res = await fetch('/api/auth/signup', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ name, email, password })
+                });
+
+                const data = await res.json();
+                if (res.ok) {
+                    alert('Signup successful!');
+                    window.location.href = '/bmw.html';
+                } else {
+                    alert(data.error || 'Signup failed');
+                }
+            });
+        </script>
+
+    </center>
+
+</body>
+
+</html>

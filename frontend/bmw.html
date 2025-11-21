@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMW</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="icon" href="bmw-logo.png">
+    <style>
+        .bmwlogo {
+            margin-left: 50px;
+            margin-top: 30px;
+            padding-right: 350px;
+        }
+
+        #toppart {
+            display: flex;
+            background-image: url(color.jpg);
+            background-repeat: no-repeat;
+        }
+
+        .nav {
+            display: flex;
+            gap: 50px;
+            padding: 12px 50px;
+            border-bottom: 1px solid #ccc;
+            align-items: center;
+        }
+
+        .nav a {
+            font-size: x-large;
+            font-family: monospace;
+            text-decoration: none;
+            color: #000;
+            padding: 6px 12px;
+            border-radius: 6px;
+            transition: color .2s, background-color .2s;
+        }
+
+        .nav a:hover {
+            color: green;
+        }
+
+        .nav a.active {
+            color: #fff;
+            background-color: green;
+            /* stays green on the current page */
+        }
+
+
+        h1 {
+            font-family: sans-serif;
+            font-size: x-large;
+            /* padding-top: 30px;
+            padding-left: 30px; */
+        }
+
+        .logins {
+            padding-left: 400px;
+            /* font-size: xx-large; */
+        }
+
+        a {
+            color: rgb(0, 0, 0);
+
+        }
+
+        .logins {
+            display: flex;
+            margin-top: 20px;
+            margin-left: 30px;
+        }
+
+
+
+        .locationss {
+            padding-left: 30px;
+            font-size: x-large;
+        }
+
+        /* 
+        #middlepart {
+            display: flex;
+        } */
+
+        /* .about {
+            margin-left: 50px;
+            font-size: x-large;
+            font-family: monospace;
+            text-decoration: none;
+        }
+
+        .home {
+            padding-left: 50px;
+            font-size: x-large;
+            font-family: monospace;
+            text-decoration: none;
+        }
+
+        .models {
+            padding-left: 50px;
+            font-size: x-large;
+            font-family: monospace;
+            text-decoration: none;
+        } */
+
+        /* a:active, */
+        a:hover {
+            color: blue;
+            text-decoration: none;
+
+        }
+
+        .gt3 {
+            padding-top: 30px;
+            padding-left: 80px;
+            display: flex;
+        }
+
+        .child1 {
+            padding-right: 30px;
+        }
+
+        table {
+            padding-left: 50px;
+        }
+
+        .info {
+            padding-left: 100px;
+            font-size: larger;
+            font-family: sans-serif;
+        }
+
+        .para {
+            font-size: x-large;
+
+        }
+
+        .bottom {
+            padding-top: 30px;
+            /* margin-top: 30px; */
+            /* margin-left: 50px; */
+            display: flex;
+            padding-bottom: 100px;
+            background-color: rgba(128, 128, 128, 0.303);
+        }
+
+        a {
+            font-size: x-large;
+            text-decoration: none;
+        }
+
+        .first {
+            padding-bottom: 30px;
+        }
+
+        .child10 {
+            padding-left: 30px;
+        }
+
+        .child11 {
+            padding-left: 100px;
+        }
+
+        .child12 {
+            padding-left: 200px;
+        }
+
+        .child13 {
+            padding-left: 100px;
+            font-size: x-large;
+        }
+
+        /* .child10 {
+            margin-left: 500px;
+        } */
+    </style>
+</head>
+
+<body>
+    <div id="toppart">
+        <div><img src="bmw-logo.png" alt="" width="100px" height="100px" class="bmwlogo"></div>
+        <div>
+            <pre><h1 style="margin-top: 40px;">      The Ultimate Driving Machine</h1></pre>
+            <h1> Where performance meets elegance</h1>
+        </div>
+        <div class="logins">
+            <div class="loginicon"><a
+                    href="file:///C:/pumo%20fullstack/bmw/frontend/login.htmlC:\pumo fullstack\bmw\frontend\bmw.html"
+                    target="_blank">
+                    <abbr title="Login Page"><i class="fa-solid fa-circle-user"></i></abbr></a></div>
+            <div>
+                <div class="locationss"><i class="fa-solid fa-location-dot"></i> <select name="location" id="location">
+                        <option value="chennai">chennai</option>
+                    </select></div>
+            </div>
+        </div>
+    </div>
+    <hr>
+
+    <!-- <div id="middlepart">
+        <div  class="home"><a href="file:///C:/pumo%20fullstack/bmw/bmw.html">Home</a></div>
+        <div  class="about"><a href="file:///C:/pumo%20fullstack/bmw/about.html">About Us</a></div>
+        <div  class="models"><a href="file:///C:/pumo%20fullstack/bmw/models.html">Models</a></div>
+    </div> -->
+    <div id="middlepart" class="nav">
+        <a href="bmw.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="models.html">Models</a>
+    </div>
+
+    <script>
+        // get the current file name (e.g., "about.html")
+        let page = window.location.pathname.split("/").pop();
+        if (!page) page = "bmw.html";           // default if it’s the root
+
+        // find the matching link and mark it active
+        const current = document.querySelector(`.nav a[href$="${page}"]`);
+        if (current) current.classList.add("active");
+    </script>
+
+
+
+    <!-- content for home page -->
+
+    <div class="gt3">
+        <div class="child1">
+            <div><img src="gt4.jpg" alt="" width="600px" height="400px"></div>
+            <div><img src="bmw-m4-gt4-evo-hd-02.avif" alt="" width="600px" height="400px"></div>
+        </div>
+        <div class="child2"><img src="gt4 back.jpg" alt="" width="600px" height="400px">
+            <p style="font-size: x-large; font-family: fantasy; text-align: justify; width: 600px;">
+                The BMW M4 GT4 is a purebred race car engineered for
+                performance, precision, and endurance. Based on the
+                production M4 but reimagined for competitive motorsport, the GT4 blends BMW’s racing DNA with
+                cutting-edge technology, making it a weapon of choice in GT4 championships worldwide. <br>
+                <span style="font-family: sans-serif;">“Engineered to push limits — the BMW M4 GT4 is where performance
+                    meets precision on every lap.”
+
+                </span>
+            </p>
+        </div>
+    </div>
+    <hr>
+
+    <div>
+        <h3 style="font-size: xx-large; text-align: center; padding-top: 50px;">Top Picks of BMW</h3>
+        <table>
+            <tr>
+                <td>
+                    <p class="para"><b>1. BMW M4 Competition </b></p> <img src="m4 home.jpg" alt="" width="300px"
+                        height="200px">
+                </td>
+                <td class="info">
+                    <p>"The heart of motorsport in a street-legal coupe."
+                        High-performance, rear-wheel drive, aggressive styling — the M4 Competition delivers precision
+                        handling and pure adrenaline. <br> Engine: 3.0L TwinPower Turbo I6 <br>
+
+                        Horsepower: 503 hp <br>
+
+                        0–100 km/h: ~3.9 seconds</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p class="para"><b>2. BMW X5 </b></p> <img src="x5 home.jpg" alt="" width="300px" height="200px">
+                </td>
+                <td class="info">
+                    <p>"Command the road with luxury and power."
+                        A premium SUV blending comfort, space, and strong performance — perfect for families and
+                        adventure seekers alike. <br> Engine Options: I6 or V8 (M60i variant) <br> Interior: Luxurious
+                        and tech-forward <br> Drive: xDrive all-wheel drive system</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p class="para"><b> 3. BMW M5CS </b></p> <img src="m5 cs home.jpg" alt="" width="300px"
+                        height="200px">
+                </td>
+                <td class="info">
+                    <p>"The fastest and most powerful BMW ever built."
+                        Track-ready yet road-legal, the limited-edition M5 CS pushes the limits of BMW M engineering.
+                        <br> Engine: 4.4L TwinPower Turbo V8 <br> Horsepower: 627 hp <br> 0–100 km/h: ~3.0 seconds
+                    </p>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <hr>
+
+    <div class="bottom">
+        <div class="child10">
+            <div class="first"><a href=""> contact us </a>
+                <p>1234567890</p>
+            </div>
+
+            <div class="first"><a href="">bmw@gmail.com</a></div>
+        </div>
+        <div class="child11">
+            <div><a href="https://www.instagram.com/bmw/"><i class="fab fa-instagram"
+                        style="font-size:24px; color:#E1306C; font-size: 40px;"></i></a></div> <br> <br>
+            <div> <a href=""><i class="fab fa-whatsapp" style="font-size:36px; color:#25D366;"></i></a></div> <br> <br>
+
+            <div><a href=""><i class="fab fa-facebook fa-2x" style="color:#1877F2; font-size: xx-large;"></i>
+                </a></div> <br> <br>
+
+            <div><a href=""><i class="fab fa-twitter fa-2x" style="color:#1DA1F2; font-size: x-large;"></i>
+                </a></div>
+        </div>
+
+        <div class="child13">
+            <div>
+                <span style="font-size: large;"><b> Quick Links </b></span> <br> <br>
+                <div>Build your BMW</div> <br>
+                <div>BMW Financial services</div> <br>
+                <div>BMW Safety</div> <br>
+                <div>BMW Premium Selection (Used Cars)</div>
+            </div>
+        </div>
+
+        <div class="child13">
+            <div>
+                <span style="font-size: large;"> <b> Experience BMW </b></span> <br> <br>
+                <div>BMW Groups</div> <br>
+                <div>BMW Club</div> <br>
+                <div>BMW Motorrad</div> <br>
+                <div>Charging Network</div>
+            </div>
+        </div>
+
+        <div class="child13">
+            <span style="font-size: large;"> <b>Legal </b></span> <br> <br>
+            <div>Legal Disclaimer/Imprint</div> <br>
+            <div>Privacy Policy</div>
+        </div>
+
+
+    </div>
+
+
+    <script>
+        (async () => {
+            const res = await fetch('/api/auth/me');
+            const data = await res.json();
+            const user = data.user;
+
+            const loginIcon = document.querySelector('.loginicon');
+            if (loginIcon) {
+                if (user) {
+                    loginIcon.innerHTML = `<span>Hello, ${user.name.split(' ')[0]} | <a href="#" id="logout">Logout</a></span>`;
+                    document.getElementById('logout').addEventListener('click', async (e) => {
+                        e.preventDefault();
+                        await fetch('/api/auth/logout', { method: 'POST' });
+                        location.reload();
+                    });
+                } else {
+                    loginIcon.innerHTML = `<a href="/login.html" title="Login"><i class="fa-solid fa-circle-user"></i></a>`;
+                }
+            }
+        })();
+    </script>
+    <script src="/app.js"></script>
+
+
+
+</body>
+
+</html>
