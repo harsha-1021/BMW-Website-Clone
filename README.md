@@ -120,4 +120,5 @@ Create a `.env` file inside `/backend`:
 
 ## 👨‍💻 Author
 **Developed by: Harshath K**
+---
 **Stack:** Full Stack (Node.js + Express + SQLite)  
